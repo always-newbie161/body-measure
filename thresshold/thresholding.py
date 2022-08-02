@@ -8,7 +8,7 @@ gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 flag, thresh = cv2.threshold(gray, 120, 255, cv2.THRESH_BINARY)
 
 # Find contours
-img2, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 contours = sorted(contours, key=cv2.contourArea, reverse=True) 
 
 # Select long perimeters onl"y"
